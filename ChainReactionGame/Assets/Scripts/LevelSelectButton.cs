@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class JoeysPlaygroundButton : MonoBehaviour {
+
+public class LevelSelectButton : MonoBehaviour {
 
     public GameObject sceneManager;
 
@@ -11,7 +11,7 @@ public class JoeysPlaygroundButton : MonoBehaviour {
     public SceneScript sceneScript;
 
 	// Use this for initialization
-	void Start () {
+	void Start () {       
         sceneScript = sceneManager.GetComponent<SceneScript>();
 	}
 	
@@ -20,7 +20,8 @@ public class JoeysPlaygroundButton : MonoBehaviour {
 		
 	}
 
-   public void LoadJoeysPlayground() {
-       sceneScript.loadScene(1);
+    public void LoadLevelSelect()
+    {
+        sceneScript.loadScene(2);
     }
 }
