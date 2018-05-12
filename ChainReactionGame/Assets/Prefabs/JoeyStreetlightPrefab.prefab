@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457432608218132}
   m_Layer: 0
-  m_Name: JoeyStreetlight
+  m_Name: JoeyStreetlightPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
