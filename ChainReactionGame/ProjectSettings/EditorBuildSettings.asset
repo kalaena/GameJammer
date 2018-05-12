@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JoeysPlayground.unity
     guid: 2456e9ee4b2d94646aec58ea57e33659
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 8eb005eb3ec6da74a900ae69af4a6021
   m_configObjects: {}

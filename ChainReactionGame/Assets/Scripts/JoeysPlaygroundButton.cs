@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class JoeysPlaygroundButton : MonoBehaviour {
 
+    public GameObject sceneManager;
+
+    [HideInInspector]
+    public SceneScript sceneScript;
+
 	// Use this for initialization
 	void Start () {
-		
+        sceneScript = sceneManager.GetComponent<SceneScript>();
 	}
 	
 	// Update is called once per frame
@@ -16,6 +21,6 @@ public class JoeysPlaygroundButton : MonoBehaviour {
 	}
 
    public void LoadJoeysPlayground() {
-        SceneManager.LoadScene(1);
+       sceneScript.loadScene(1);
     }
 }
