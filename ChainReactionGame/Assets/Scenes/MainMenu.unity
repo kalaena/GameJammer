@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 204122098}
   - component: {fileID: 204122097}
   - component: {fileID: 204122096}
+  - component: {fileID: 204122100}
   m_Layer: 5
   m_Name: JoeysPlaygroundButton
   m_TagString: Untagged
@@ -276,7 +277,7 @@ RectTransform:
   m_GameObject: {fileID: 204122094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 504980653}
   m_Father: {fileID: 2051175249}
@@ -284,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -80}
+  m_AnchoredPosition: {x: 18, y: -70}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204122096
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.4509804, b: 0.5882353, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -383,6 +384,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204122094}
+--- !u!114 &204122100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204122094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc138712093ad944b49918c9b36e88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale: 0
+  minScale: 0
+  scaleUpFactor: 0.1
+  scaleDownFactor: 0.1
+  pulseSpeed: 0.02
+  originalScaleX: 0
+  originalScaleY: 0
 --- !u!1 &504980652
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +561,7 @@ GameObject:
   - component: {fileID: 643037062}
   - component: {fileID: 643037061}
   - component: {fileID: 643037060}
+  - component: {fileID: 643037064}
   m_Layer: 5
   m_Name: ExitGameButton
   m_TagString: Untagged
@@ -557,7 +577,7 @@ RectTransform:
   m_GameObject: {fileID: 643037058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1990026187}
   m_Father: {fileID: 2051175249}
@@ -565,7 +585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -120}
+  m_AnchoredPosition: {x: 18, y: -130}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643037060
@@ -599,7 +619,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.4509804, b: 0.5882353, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -664,6 +684,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643037058}
+--- !u!114 &643037064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643037058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc138712093ad944b49918c9b36e88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale: 0
+  minScale: 0
+  scaleUpFactor: 0.1
+  scaleDownFactor: 0.1
+  pulseSpeed: 0.02
+  originalScaleX: 0
+  originalScaleY: 0
 --- !u!1 &680162700
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +787,7 @@ GameObject:
   - component: {fileID: 800990420}
   - component: {fileID: 800990419}
   - component: {fileID: 800990418}
+  - component: {fileID: 800990421}
   m_Layer: 5
   m_Name: StartGameButton
   m_TagString: Untagged
@@ -764,7 +803,7 @@ RectTransform:
   m_GameObject: {fileID: 800990416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 879664347}
   m_Father: {fileID: 2051175249}
@@ -772,7 +811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: 0}
+  m_AnchoredPosition: {x: 18, y: 50}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800990418
@@ -795,7 +834,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.4481132, b: 0.58580464, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -849,6 +888,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800990416}
+--- !u!114 &800990421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800990416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc138712093ad944b49918c9b36e88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale: 0
+  minScale: 0
+  scaleUpFactor: 0.1
+  scaleDownFactor: 0.1
+  pulseSpeed: 0.02
+  originalScaleX: 0
+  originalScaleY: 0
 --- !u!1 &879664346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1205,7 @@ GameObject:
   - component: {fileID: 1991264289}
   - component: {fileID: 1991264288}
   - component: {fileID: 1991264287}
+  - component: {fileID: 1991264290}
   m_Layer: 5
   m_Name: LevelSelectButton
   m_TagString: Untagged
@@ -1163,7 +1221,7 @@ RectTransform:
   m_GameObject: {fileID: 1991264285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 894815520}
   m_Father: {fileID: 2051175249}
@@ -1171,7 +1229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -40}
+  m_AnchoredPosition: {x: 18, y: -10}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991264287
@@ -1194,7 +1252,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.4509804, b: 0.5882353, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1259,6 +1317,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1991264285}
+--- !u!114 &1991264290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1991264285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc138712093ad944b49918c9b36e88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxScale: 0
+  minScale: 0
+  scaleUpFactor: 0.1
+  scaleDownFactor: 0.1
+  pulseSpeed: 0.02
+  originalScaleX: 0
+  originalScaleY: 0
 --- !u!1 &2051175245
 GameObject:
   m_ObjectHideFlags: 0
