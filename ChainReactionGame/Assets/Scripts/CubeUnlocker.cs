@@ -14,7 +14,7 @@ public class CubeUnlocker : MonoBehaviour {
 
         //cascade the cube destruction up the building and eventually self-cleanup
         if (transform.position.y < 30)
-            transform.position += new Vector3(0, 0.1f, 0);
+            transform.position += new Vector3(0, 0.2f, 0);
         else
             GameObject.Destroy(this.gameObject);
 
@@ -28,7 +28,7 @@ public class CubeUnlocker : MonoBehaviour {
         if (!collision.gameObject.tag.Equals("Immobile") && collision.gameObject.GetComponent<Rigidbody>() == null)
         {
             collision.gameObject.AddComponent<Rigidbody>();
-            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(15, this.gameObject.transform.position, 1, 1.0f);
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(50, collision.gameObject.transform.position, 100, 1.0f);
         }
             
     }
