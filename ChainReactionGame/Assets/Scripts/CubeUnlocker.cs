@@ -24,7 +24,7 @@ public class CubeUnlocker : MonoBehaviour {
 
     void OnTriggerEnter(Collider collision)
     {
-        //if the object is not the ground (tag 'Immobile") and the CubeUnlocker hasn't already tried unlocking in a previous frame
+        //if the object is not the ground (tag "Immobile") and the CubeUnlocker hasn't already tried unlocking in a previous frame
         if (!collision.gameObject.tag.Equals("Immobile") && collision.gameObject.GetComponent<Rigidbody>() == null)
         {
             collision.gameObject.AddComponent<Rigidbody>();
