@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
@@ -15,7 +16,6 @@ public class CameraController : MonoBehaviour {
 
         Vector3 pos = transform.position; // Moving camera with the WSDA on the keyboard or panning with the mouse cursor to the screen boarder.
 
-<<<<<<< HEAD
 		if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
         {
             pos.z += panSpeed * Time.deltaTime;
@@ -29,32 +29,17 @@ public class CameraController : MonoBehaviour {
             pos.x += panSpeed * Time.deltaTime;
         }
         if (Input.GetKey("s") || Input.mousePosition.y <= Screen.height - panBorderThickness)
-=======
-		if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
-        {
-            pos.z += panSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
-        {
-            pos.z -= panSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
-        {
-            pos.x += panSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
->>>>>>> parent of 3d43975... Merge branch 'master' of https://github.com/kalaena/GameJammer
         {
             pos.x -= panSpeed * Time.deltaTime;
         }
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel"); // Allows the scroll wheel to move on the Y axis at a set speed.
+        pos.y -= scroll * scrollSpeed * 100f * Time.deltaTime;
 
         pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x); //Sets X axis movement of the camera. Can be adjusted in Unity.
         pos.y = Mathf.Clamp(pos.y, minY, maxY); //Clamps camera zoom.
         pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y); //Sets Z axis movement of the camera. Can be adjusted in Unity.
 
-        float scroll = Input.GetAxis("Mouse ScrollWheel"); // Allows the scroll wheel to move on the Y axis at a set speed.
-        pos.y -= scroll * scrollSpeed * 100f * Time.deltaTime;
-
-        transform.position = pos; //Moves camera.
+        transform.position = pos; //Moves camera. 
 	}
 }
