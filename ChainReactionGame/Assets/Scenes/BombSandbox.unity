@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 4545605364650996, guid: 868fbb2f8bfa96443afc091278733305, type: 2}
+  carPrefab: {fileID: 4925706779287102, guid: 3de5fa2e5f5c8fc408468b517e69b0c1, type: 2}
 --- !u!4 &1381537560
 Transform:
   m_ObjectHideFlags: 0
