@@ -652,6 +652,7 @@ Transform:
   m_LocalPosition: {x: -1.33, y: 8.34, z: -4.43}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_LocalRotation: {x: 0.20082924, y: 0.67798793, z: -0.21263108, w: 0.6743797}
   m_LocalPosition: {x: 1, y: 7, z: -4}
@@ -666,6 +667,8 @@ Transform:
 >>>>>>> parent of 3d43975... Merge branch 'master' of https://github.com/kalaena/GameJammer
 =======
 >>>>>>> parent of 8a66bdc... undo scene changes
+=======
+>>>>>>> parent of 3d43975... Merge branch 'master' of https://github.com/kalaena/GameJammer
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
