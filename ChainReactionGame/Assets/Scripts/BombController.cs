@@ -6,7 +6,7 @@ public class BombController : MonoBehaviour
 {
     public GameObject explosionPrefab;
     public GameObject cubeUnlocker;
-    
+    public GameObject smokeEmitter;
 
     private GameObject explosionInstance;
 
@@ -30,6 +30,12 @@ public class BombController : MonoBehaviour
         //create explosion at our bomb's location
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
+        //create smoke emitter standing upright
+        GameObject smoke = Instantiate(smokeEmitter, transform.position, Quaternion.identity);
+        smoke.transform.Rotate(-90, 0, 0);
+
+        //create a smoke particle emitter at bomb's location
+
         //turn the explosion to look at the camera
         explosionInstance.transform.LookAt(GameObject.Find("Main Camera").transform.position);
 
@@ -52,5 +58,7 @@ public class BombController : MonoBehaviour
 
         //destroy this bomb
         Destroy(gameObject);
+
+        //DO NOT DESTROY SMOKE EMITTER
     }
 }
