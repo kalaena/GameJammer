@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 8eb005eb3ec6da74a900ae69af4a6021
   - enabled: 1
-    path: Assets/JoeySceneUITest.unity
+    path: Assets/Scenes/JoeySceneUITest.unity
     guid: 53048ab3d8bfcde45bbe61948f63bc0c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: f6539828ea8556847896f9b26b349762
   m_configObjects: {}

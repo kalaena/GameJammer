@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class LevelSelectButton : MonoBehaviour {
+public class CreditsButton : MonoBehaviour {
 
     public GameObject sceneManager;
 
@@ -22,6 +22,6 @@ public class LevelSelectButton : MonoBehaviour {
 
     public void LoadLevelSelect()
     {
-        sceneScript.loadScene(2);
+        sceneScript.loadScene(3);
     }
 }

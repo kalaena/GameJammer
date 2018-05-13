@@ -8,8 +8,8 @@ public class MainMenuSoundManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (themeSong.isPlaying)
-            GameObject.Destroy(this.gameObject);
+        //if (themeSong.isPlaying)
+            //GameObject.Destroy(this.gameObject);
     }
 	
 	// Update is called once per frame
