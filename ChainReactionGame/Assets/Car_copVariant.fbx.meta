@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: e17998f1cfe67ae40939613b82302285
-=======
-guid: c7aeb684d39499d41bd68b50c74c06ff
->>>>>>> c8d62d91225b868c39eccdffb685567d456afd32
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -13,6 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: CopCar
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -88,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
