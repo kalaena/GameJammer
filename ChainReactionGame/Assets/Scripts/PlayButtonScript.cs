@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class CreditsButton : MonoBehaviour {
-
+public class PlayButtonScript : MonoBehaviour {
+    
     public GameObject sceneManager;
 
     [HideInInspector]
     public SceneScript sceneScript;
 
 	// Use this for initialization
-	void Start () {       
-        sceneScript = sceneManager.GetComponent<SceneScript>();
+	void Start () {
+        sceneScript = sceneManager.GetComponent<SceneScript>();		
 	}
 	
 	// Update is called once per frame
@@ -20,8 +19,8 @@ public class CreditsButton : MonoBehaviour {
 		
 	}
 
-    public void LoadCredits()
+    public void LoadPlayLevel()
     {
-        sceneScript.loadScene(3);
+        sceneScript.loadScene(4);
     }
 }
