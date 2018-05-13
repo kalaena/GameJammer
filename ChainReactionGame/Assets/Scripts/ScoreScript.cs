@@ -16,7 +16,7 @@ public class ScoreScript : MonoBehaviour {
 		
 	}
 
-    void tallyCube()
+    public void tallyCube()
     {
         playerScore++;
     }
