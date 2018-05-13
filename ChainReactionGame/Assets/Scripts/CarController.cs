@@ -9,11 +9,13 @@ public class CarController : MonoBehaviour
 
     const float speed = 1.5f;
 
+    private Rigidbody _rigidBody;
+
     // Use this for initialization
     void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0.0f, 0.0f, speed);
+        _rigidBody = GetComponent<Rigidbody>();
+        _rigidBody.velocity = new Vector3(0.0f, 0.0f, speed);
     }
 
     // Update is called once per frame
@@ -28,8 +30,7 @@ public class CarController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //we have gravity off by default so we can drive by without being all wierd, but on collision we need to turn it on so we don't float out into space
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
+        //we have gravity off by default so we can drive by without being all weird, but on collision we need to turn it on so we don't float out into space
+        _rigidBody.useGravity = true;
     }
 }
