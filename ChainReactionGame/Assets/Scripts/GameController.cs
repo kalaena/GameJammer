@@ -5,16 +5,18 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Transform bombPrefab;
+    public Transform carPrefab;
 
     // Use this for initialization
     void Start()
     {
-
+        StartCoroutine(spawnCar());
     }
 
     // Update is called once per frame
     void Update()
     {
+        //handle mouse clicks
         if (Input.GetButtonDown("Fire1"))
         {
             // Cast a ray from mouse location
@@ -28,5 +30,12 @@ public class GameController : MonoBehaviour
                 Instantiate(bombPrefab, hit.point, Quaternion.identity);
             }
         }
+    }
+
+    private IEnumerator spawnCar()
+    {
+        yield return new WaitForSeconds(5);
+
+        Instantiate(carPrefab, new Vector3(-0.206f, 0.128f, -7.5f), Quaternion.identity);
     }
 }
