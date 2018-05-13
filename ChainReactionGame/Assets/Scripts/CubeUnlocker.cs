@@ -28,7 +28,7 @@ public class CubeUnlocker : MonoBehaviour {
         if (!collision.gameObject.tag.Equals("Immobile") && collision.gameObject.GetComponent<Rigidbody>() == null)
         {
             collision.gameObject.AddComponent<Rigidbody>();
-            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(25, this.gameObject.transform.position, 15, 1.0f);
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(15, this.gameObject.transform.position, 3, 1.0f);
         }
             
     }
