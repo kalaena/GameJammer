@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameController : MonoBehaviour
         //handle mouse clicks
         if (Input.GetButtonDown("Fire1"))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                //UI was clicked... nothing to do here
+                return;
+            }
+
             // Cast a ray from mouse location
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
