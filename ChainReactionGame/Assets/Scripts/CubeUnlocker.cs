@@ -11,6 +11,8 @@ public class CubeUnlocker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        //cascade the cube destruction up the building and eventually self-cleanup
         if (transform.position.y < 100)
             transform.position += new Vector3(0, 0.1f, 0);
         else
@@ -19,7 +21,7 @@ public class CubeUnlocker : MonoBehaviour {
 
     void OnTriggerEnter(Collider collision)
     {
-        //Debug.Log("collided");
+        //if the object is not the ground (tag 'Immobile") and the CubeUnlocker hasn't already tried unlocking in a previous frame
         if (!collision.gameObject.tag.Equals("Immobile") && collision.gameObject.GetComponent<Rigidbody>() == null)
         {
             collision.gameObject.AddComponent<Rigidbody>();
