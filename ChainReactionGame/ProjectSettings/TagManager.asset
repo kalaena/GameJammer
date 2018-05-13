@@ -5,14 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Immobile
-<<<<<<< HEAD
   - Cube
-=======
   - ConcreteBlock
   - BrickBlock
   - WoodBlock
   - SteelBlock
->>>>>>> 3730b32a7ce2381e14c1a1de75fc15840a1b0c26
   layers:
   - Default
   - TransparentFX
