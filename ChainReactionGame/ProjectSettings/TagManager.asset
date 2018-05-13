@@ -3,12 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-  tags: []
-=======
   tags:
   - Immobile
->>>>>>> e6775ee7c09c84db83a84181b7154a1a0d927f62
   layers:
   - Default
   - TransparentFX
