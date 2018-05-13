@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
     public Transform bombPrefab;
     public Transform carPrefab;
 
+    public GameObject BombManager;
+
     // Use this for initialization
     void Start()
     {
@@ -24,10 +26,13 @@ public class GameController : MonoBehaviour
 
             //check if ray collides with something for us to place a bomb on (in this case the ground)
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit) && BombManager.GetComponent<BombManagerScript>().remainingBombs > 0)
             {
+                BombManager.GetComponent<BombManagerScript>().bombPlaced();
+
                 //spawn a bomb at the clicked point
-                Instantiate(bombPrefab, hit.point, Quaternion.identity);
+                GameObject bomb = Instantiate(bombPrefab, hit.point, Quaternion.identity).gameObject;
+                BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
             }
         }
     }

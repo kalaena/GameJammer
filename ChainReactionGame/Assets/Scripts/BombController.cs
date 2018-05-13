@@ -13,11 +13,7 @@ public class BombController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //set bomb to explode
-        StartCoroutine(explode());
-
-        //set explosion to be cleaned up
-        StartCoroutine(cleanupExplosion());
+              
     }
 
     // Update is called once per frame
@@ -26,10 +22,8 @@ public class BombController : MonoBehaviour
 
     }
 
-    private IEnumerator explode()
-    {
-        yield return new WaitForSeconds(2);
-        
+    public void explode()
+    {             
         //play bomb explosion sound
         this.gameObject.GetComponent<AudioSource>().Play();
 
@@ -44,6 +38,9 @@ public class BombController : MonoBehaviour
         
         //we can't destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
         gameObject.transform.position = new Vector3(999, 999, 999);
+
+        //set explosion to be cleaned up
+        StartCoroutine(cleanupExplosion());
     }
 
     private IEnumerator cleanupExplosion()
