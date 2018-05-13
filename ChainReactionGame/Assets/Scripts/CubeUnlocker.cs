@@ -13,13 +13,13 @@ public class CubeUnlocker : MonoBehaviour {
 	void Update () {
 
         //cascade the cube destruction up the building and eventually self-cleanup
-        if (transform.position.y < 100)
+        if (transform.position.y < 30)
             transform.position += new Vector3(0, 0.1f, 0);
         else
             GameObject.Destroy(this.gameObject);
 
         //widen "explosion" radius of sphere as it climbs the building
-        this.gameObject.GetComponent<SphereCollider>().radius += 0.013f;
+        this.gameObject.GetComponent<SphereCollider>().radius += 0.015f;
 	}
 
     void OnTriggerEnter(Collider collision)

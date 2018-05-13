@@ -31,12 +31,10 @@ public class BombController : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         //create explosion at our bomb's location
-<<<<<<< HEAD
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0, 90, 0));
         this.gameObject.GetComponent<AudioSource>().Play();
-=======
+
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
->>>>>>> 3c68f3f2d27f8b397be4974211e1e5e16f84c3ff
 
         //turn the explosion to look at the camera
         explosionInstance.transform.LookAt(GameObject.Find("Main Camera").transform.position);
