@@ -21,6 +21,6 @@ public class JoeysPlaygroundButton : MonoBehaviour {
 	}
 
    public void LoadJoeysPlayground() {
-       sceneScript.loadScene(1);
+       sceneScript.loadScene(2);
     }
 }
