@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  cubeUnlocker: {fileID: 1576351629148736, guid: 8c097d1405fd41041ad8ebd8ae0e2c03,
+    type: 2}
 --- !u!135 &135247873194292954
 SphereCollider:
   m_ObjectHideFlags: 1
