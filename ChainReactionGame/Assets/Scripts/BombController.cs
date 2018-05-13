@@ -6,6 +6,7 @@ public class BombController : MonoBehaviour
 {
     public GameObject explosionPrefab;
     public GameObject cubeUnlocker;
+    
 
     private GameObject explosionInstance;
 
@@ -28,6 +29,7 @@ public class BombController : MonoBehaviour
     private IEnumerator explode()
     {
         yield return new WaitForSeconds(2);
+        this.gameObject.GetComponent<AudioSource>().Play();
 
         //create explosion at our bomb's location
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
