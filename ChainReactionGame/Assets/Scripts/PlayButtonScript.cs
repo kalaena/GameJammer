@@ -21,6 +21,6 @@ public class PlayButtonScript : MonoBehaviour {
 
     public void LoadPlayLevel()
     {
-        sceneScript.loadScene(4);
+        sceneScript.loadScene(2);
     }
 }

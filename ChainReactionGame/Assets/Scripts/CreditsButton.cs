@@ -22,6 +22,6 @@ public class CreditsButton : MonoBehaviour {
 
     public void LoadCredits()
     {
-        sceneScript.loadScene(3);
+        sceneScript.loadScene(1);
     }
 }
