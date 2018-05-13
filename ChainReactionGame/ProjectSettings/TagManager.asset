@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Immobile
+  - ConcreteBlock
+  - BrickBlock
+  - WoodBlock
+  - SteelBlock
   layers:
   - Default
   - TransparentFX
