@@ -40,6 +40,6 @@ public class CameraController : MonoBehaviour {
         pos.y = Mathf.Clamp(pos.y, minY, maxY); //Clamps camera zoom.
         pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y); //Sets Z axis movement of the camera. Can be adjusted in Unity.
 
-        transform.position = pos; //Moves camera.
+        transform.position = pos; //Moves camera. 
 	}
 }
