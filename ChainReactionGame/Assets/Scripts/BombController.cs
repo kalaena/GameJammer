@@ -37,7 +37,7 @@ public class BombController : MonoBehaviour
         cubeUnlocker = Instantiate(cubeUnlocker, transform.position, Quaternion.Euler(0, 90, 0));
         
 
-        //we can destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
+        //we can't destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
         gameObject.transform.position = new Vector3(999, 999, 999);
     }
 
