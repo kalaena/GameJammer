@@ -17,6 +17,9 @@ public class CubeUnlocker : MonoBehaviour {
             transform.position += new Vector3(0, 0.1f, 0);
         else
             GameObject.Destroy(this.gameObject);
+
+        //widen "explosion" radius of sphere as it climbs the building
+        this.gameObject.GetComponent<SphereCollider>().radius += 0.013f;
 	}
 
     void OnTriggerEnter(Collider collision)

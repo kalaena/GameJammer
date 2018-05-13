@@ -6,6 +6,7 @@ public class BombController : MonoBehaviour
 {
     public GameObject explosionPrefab;
     public GameObject cubeUnlocker;
+    
 
     private GameObject explosionInstance;
 
@@ -31,6 +32,7 @@ public class BombController : MonoBehaviour
 
         //create explosion at our bomb's location
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0, 90, 0));
+        this.gameObject.GetComponent<AudioSource>().Play();
 
         //turn the explosion to look at the camera
         explosionInstance.transform.LookAt(GameObject.Find("Main Camera").transform.position);
