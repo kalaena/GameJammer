@@ -19,7 +19,7 @@ public class CubeUnlocker : MonoBehaviour {
             GameObject.Destroy(this.gameObject);
 
         //widen "explosion" radius of sphere as it climbs the building
-        this.gameObject.GetComponent<SphereCollider>().radius += 0.015f;
+        this.gameObject.GetComponent<SphereCollider>().radius += 0.01f;
 	}
 
     void OnTriggerEnter(Collider collision)
@@ -28,7 +28,7 @@ public class CubeUnlocker : MonoBehaviour {
         if (!collision.gameObject.tag.Equals("Immobile") && collision.gameObject.GetComponent<Rigidbody>() == null)
         {
             collision.gameObject.AddComponent<Rigidbody>();
-            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(15, this.gameObject.transform.position, 3, 1.0f);
+            collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(15, this.gameObject.transform.position, 1, 1.0f);
         }
             
     }
