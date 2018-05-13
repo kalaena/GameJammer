@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CubeUnlocker : MonoBehaviour {
 
+    public GameObject ScoreManager;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -29,6 +31,8 @@ public class CubeUnlocker : MonoBehaviour {
         {
             collision.gameObject.AddComponent<Rigidbody>();
             collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(50, collision.gameObject.transform.position, 100, 1.0f);
+            ScoreManager.GetComponent<ScoreScript>().tallyCube();
+            collision.gameObject.GetComponent<CubeScript>().isActive = true;
         }
             
     }
