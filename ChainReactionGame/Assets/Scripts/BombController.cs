@@ -31,16 +31,20 @@ public class BombController : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         //create explosion at our bomb's location
+<<<<<<< HEAD
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0, 90, 0));
         this.gameObject.GetComponent<AudioSource>().Play();
+=======
+        explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+>>>>>>> 3c68f3f2d27f8b397be4974211e1e5e16f84c3ff
 
         //turn the explosion to look at the camera
         explosionInstance.transform.LookAt(GameObject.Find("Main Camera").transform.position);
 
         //create a sphere collider that adds rigidbody collision to all cubes it touches
-        cubeUnlocker = Instantiate(cubeUnlocker, transform.position, Quaternion.Euler(0, 90, 0));
+        cubeUnlocker = Instantiate(cubeUnlocker, transform.position, Quaternion.identity);
         
-        //we can destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
+        //we can't destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
         gameObject.transform.position = new Vector3(999, 999, 999);
     }
 
