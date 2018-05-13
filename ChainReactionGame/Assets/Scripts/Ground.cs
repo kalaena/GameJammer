@@ -20,13 +20,17 @@ public class Ground : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        CubeScript cubeScript = collision.gameObject.GetComponent<CubeScript>();
-
-        if (!cubeScript.pointTallied && cubeScript.isActive && collision.gameObject.tag.Equals("Cube"))
+        //if a cube hits the ground
+        if (collision.gameObject.tag.Equals("Cube"))
         {
-            cubeScript.pointTallied = true;
-            cubeScript.isActive = false;
-            ScoreManager.GetComponent<ScoreScript>().tallyCube();
+            //check if the cube has already been scored, also avoid cubes that haven'g been activated by a bomb (the ones that spawn at ground level)
+            CubeScript cubeScript = collision.gameObject.GetComponent<CubeScript>();
+            if (!cubeScript.pointTallied && cubeScript.isActive)
+            {
+                cubeScript.pointTallied = true;
+                cubeScript.isActive = false;
+                ScoreManager.GetComponent<ScoreScript>().tallyCube();
+            }
         }
     }
 }
