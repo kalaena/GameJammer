@@ -29,6 +29,8 @@ public class BombController : MonoBehaviour
     private IEnumerator explode()
     {
         yield return new WaitForSeconds(2);
+        
+        //play bomb explosion sound
         this.gameObject.GetComponent<AudioSource>().Play();
 
         //create explosion at our bomb's location
