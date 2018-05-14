@@ -31,6 +31,6 @@ public class PointUIScript : MonoBehaviour {
 
     public void setPointValue(int pointValue) 
     {
-        this.gameObject.GetComponent<Text>().text = "Car Bonus +" + pointValue;
+        this.gameObject.GetComponent<TextMesh>().text = "Car Bonus +" + pointValue;
     }
 }

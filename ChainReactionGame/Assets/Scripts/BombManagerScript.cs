@@ -8,7 +8,7 @@ public class BombManagerScript : MonoBehaviour {
     public int maxNumberOfBombsAllowed;
     public int remainingBombs;
     public GameObject detonateButton;
-
+    
     public List<GameObject> bombsPlaced;
 
 	// Use this for initialization

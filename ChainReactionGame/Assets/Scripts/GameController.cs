@@ -6,14 +6,13 @@ using UnityEngine.EventSystems;
 public class GameController : MonoBehaviour
 {
     public Transform bombPrefab;
-    public Transform carPrefab;
 
     public GameObject BombManager;
 
     // Use this for initialization
     void Start()
     {
-        StartCoroutine(spawnCar());
+
     }
 
     // Update is called once per frame
@@ -45,18 +44,10 @@ public class GameController : MonoBehaviour
                 Vector3 bombLocation = hit.point;
                 bombLocation.y += (bombHeight / 2.0f);
                 GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.identity).gameObject;
-                BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
-                
+                                
                 //play sfx when placing bomb
                 this.gameObject.GetComponent<AudioSource>().Play();
             }
         }
-    }
-
-    private IEnumerator spawnCar()
-    {
-        yield return new WaitForSeconds(5);
-
-        Instantiate(carPrefab, new Vector3(-0.206f, 0.128f, -7.5f), Quaternion.identity);
     }
 }

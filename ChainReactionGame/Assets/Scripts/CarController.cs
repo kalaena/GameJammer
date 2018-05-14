@@ -4,44 +4,62 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    public float LeftEdgeOfMap = -7.5f;
-    public float RightEdgeOfMap = 7.5f;
-
-    public bool isTallied;
-    public GameObject ScoreManager;
+    public float LeftEdgeOfMap;
+    public float RightEdgeOfMap;
+    public int MaxSimultaneousCars;
+    public GameObject[] CarPrefabs = new GameObject[6];
 
     const float speed = 1.5f;
 
-    private Rigidbody _rigidBody;
+    private List<GameObject> spawnedCars = new List<GameObject>();
+
+    private float spawnCooldown = 0.0f;
 
     // Use this for initialization
     void Start()
     {
-        _rigidBody = GetComponent<Rigidbody>();
-        _rigidBody.velocity = new Vector3(0.0f, 0.0f, speed);
-        isTallied = false;
-        //ScoreManager = GameObject.Find("ScoreManager");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //reset position when off the map
-        if (gameObject.transform.position.z > RightEdgeOfMap)
+        TrySpawnCar();
+    }
+
+    private void TrySpawnCar()
+    {
+        if (spawnCooldown <= 0.0f)
         {
-            gameObject.transform.position = new Vector3(-0.206f, 0.128f, LeftEdgeOfMap);
+            if (spawnedCars.Count < MaxSimultaneousCars)
+            {
+                SpawnCar();
+            }
+
+            spawnCooldown = Random.Range(1.0f, 5.0f);
+        }
+        else
+        {
+            spawnCooldown -= Time.deltaTime;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void SpawnCar()
     {
-        //we have gravity off by default so we can drive by without being all weird, but on collision we need to turn it on so we don't float out into space
-        _rigidBody.useGravity = true;
+        //pick a random prefab
+        int prefabIndex = Random.Range(0, CarPrefabs.Length);
 
-        if (collision.gameObject.tag.Equals("Cube") && !isTallied)
-            {
-                isTallied = true;
-                ScoreManager.GetComponent<ScoreScript>().tallyCar(this.gameObject.transform.position);                
-            }
+        //pick random direction
+        bool direction = Random.Range(0, 2) == 1; //0-->1 but using 2 because max is exclusive for some reason
+
+        GameObject car = Instantiate(CarPrefabs[prefabIndex], new Vector3(direction ? -0.65f : -0.275f, 0.15f, direction ? RightEdgeOfMap : LeftEdgeOfMap), direction ? Quaternion.Euler(0.0f, 180.0f, 0.0f) : Quaternion.identity);
+        Rigidbody rb = car.GetComponent<Rigidbody>();
+        rb.velocity = new Vector3(0.0f, 0.0f, direction ? -speed : speed);
+        spawnedCars.Add(car);
+    }
+
+    public void OnCarDestroy(GameObject car)
+    {
+        spawnedCars.Remove(car);
     }
 }
