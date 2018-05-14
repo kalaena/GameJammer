@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuButton : MonoBehaviour {
 
-    public GameObject sceneManager;
-
-    [HideInInspector]
-    public SceneScript sceneScript;
-
+    
     // Use this for initialization
     void Start()
     {
-        sceneManager = GameObject.Find("SceneManager");
-        sceneScript = sceneManager.GetComponent<SceneScript>();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +20,6 @@ public class MainMenuButton : MonoBehaviour {
 
     public void LoadMainMenu()
     {
-        sceneScript.loadScene(0);
+        SceneManager.LoadScene(0);
     }
 }
