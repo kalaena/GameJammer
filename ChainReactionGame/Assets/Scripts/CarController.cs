@@ -7,6 +7,9 @@ public class CarController : MonoBehaviour
     public float LeftEdgeOfMap = -7.5f;
     public float RightEdgeOfMap = 7.5f;
 
+    public bool isTallied;
+    public GameObject ScoreManager;
+
     const float speed = 1.5f;
 
     private Rigidbody _rigidBody;
@@ -16,6 +19,7 @@ public class CarController : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody>();
         _rigidBody.velocity = new Vector3(0.0f, 0.0f, speed);
+        isTallied = false;
     }
 
     // Update is called once per frame
@@ -32,5 +36,12 @@ public class CarController : MonoBehaviour
     {
         //we have gravity off by default so we can drive by without being all weird, but on collision we need to turn it on so we don't float out into space
         _rigidBody.useGravity = true;
+
+        if (collision.gameObject.tag.Equals("Cube") && !isTallied)
+            {
+                isTallied = true;
+                ScoreManager.GetComponent<ScoreScript>().tallyCar();
+                
+            }
     }
 }

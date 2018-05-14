@@ -29,4 +29,9 @@ public class ScoreScript : MonoBehaviour {
     {
         playerScore++;        
     }
+
+    public void tallyCar() 
+    {
+        playerScore += 50;
+    }
 }
