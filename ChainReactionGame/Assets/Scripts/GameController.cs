@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class GameController : MonoBehaviour
         //handle mouse clicks
         if (Input.GetButtonDown("Fire1"))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                //UI was clicked... nothing to do here
+                return;
+            }
+
             // Cast a ray from mouse location
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -30,8 +37,14 @@ public class GameController : MonoBehaviour
             {
                 BombManager.GetComponent<BombManagerScript>().bombPlaced();
 
+                Debug.Log(hit.point);
+
+                float bombHeight = bombPrefab.transform.lossyScale.y;
+
                 //spawn a bomb at the clicked point
-                GameObject bomb = Instantiate(bombPrefab, hit.point, Quaternion.identity).gameObject;
+                Vector3 bombLocation = hit.point;
+                bombLocation.y += (bombHeight / 2.0f);
+                GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.identity).gameObject;
                 BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
                 
                 //play sfx when placing bomb

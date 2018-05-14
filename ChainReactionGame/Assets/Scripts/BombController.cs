@@ -51,7 +51,7 @@ public class BombController : MonoBehaviour
 
     private IEnumerator cleanupExplosion()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
         //destroy this explosion
         Destroy(explosionInstance);
@@ -61,4 +61,5 @@ public class BombController : MonoBehaviour
 
         //DO NOT DESTROY SMOKE EMITTER
     }
+
 }
