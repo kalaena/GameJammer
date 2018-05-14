@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4346573044671062}
+  - component: {fileID: 114669613184886730}
   m_Layer: 0
   m_Name: PointNotifier
   m_TagString: Untagged
@@ -39,3 +40,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114669613184886730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441745777262576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4284837c636fd6149939b5dceafb35c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointUI: {fileID: 1085889007217684, guid: 84c434ce1489dac4295820fc872ee42d, type: 2}

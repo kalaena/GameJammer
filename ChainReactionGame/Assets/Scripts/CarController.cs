@@ -20,6 +20,7 @@ public class CarController : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
         _rigidBody.velocity = new Vector3(0.0f, 0.0f, speed);
         isTallied = false;
+        //ScoreManager = GameObject.Find("ScoreManager");
     }
 
     // Update is called once per frame
@@ -40,8 +41,7 @@ public class CarController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Cube") && !isTallied)
             {
                 isTallied = true;
-                ScoreManager.GetComponent<ScoreScript>().tallyCar();
-                
+                ScoreManager.GetComponent<ScoreScript>().tallyCar(this.gameObject.transform.position);                
             }
     }
 }

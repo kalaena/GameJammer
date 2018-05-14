@@ -92,6 +92,17 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261021634839708}
   m_Enabled: 1
+<<<<<<< HEAD:ChainReactionGame/Assets/Prefabs/CarPrefab.prefab
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e2f63d92488e343b08774b674016c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftEdgeOfMap: -7.5
+  RightEdgeOfMap: 7.5
+  isTallied: 0
+  ScoreManager: {fileID: 1528257196488380, guid: f4a9020d30cdc184791f47694dda0568,
+    type: 2}
+=======
   m_Avatar: {fileID: 9000000, guid: d0bc9171a3a55244fb51b7bd357ca028, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -102,3 +113,4 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+>>>>>>> ad70204fe9349613a5fd581c3ef2189c45c72cb4:ChainReactionGame/Assets/Prefabs/CarGreenPreab.prefab
