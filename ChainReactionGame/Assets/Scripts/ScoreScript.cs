@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerScore = 0;
-        refreshHighScore();
+        //refreshHighScore();
 	}
 	
 	// Update is called once per frame
@@ -31,8 +31,9 @@ public class ScoreScript : MonoBehaviour {
         playerScore++;        
     }
 
-    public void tallyCar() 
+    public void tallyCar(Vector3 pos) 
     {
         playerScore += 50;
+        PointNotifier.GetComponent<PointNotificationScript>().createNotification(50, pos);
     }
 }

@@ -124,3 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e2f63d92488e343b08774b674016c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftEdgeOfMap: -7.5
+  RightEdgeOfMap: 7.5
+  isTallied: 0
+  ScoreManager: {fileID: 1528257196488380, guid: f4a9020d30cdc184791f47694dda0568,
+    type: 2}
