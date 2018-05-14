@@ -9,19 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1261021634839708}
+  m_RootGameObject: {fileID: 1262889232938954}
   m_IsPrefabParent: 1
---- !u!1 &1261021634839708
+--- !u!1 &1262889232938954
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4470317834142098}
-  - component: {fileID: 33404694981951536}
-  - component: {fileID: 23044138646208664}
-  - component: {fileID: 95099881308267432}
+  - component: {fileID: 4168649193883350}
+  - component: {fileID: 33859106916788078}
+  - component: {fileID: 23382941546710894}
+  - component: {fileID: 95672728882001788}
+  - component: {fileID: 54084101945832512}
+  - component: {fileID: 114635441136737302}
   m_Layer: 0
   m_Name: CarGreenPrefab
   m_TagString: Untagged
@@ -29,25 +31,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4470317834142098
+--- !u!4 &4168649193883350
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1261021634839708}
+  m_GameObject: {fileID: 1262889232938954}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05324128, y: 0.027026238, z: -0.23011285}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.34041715, y: 0.082, z: -2.500062}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23044138646208664
+--- !u!23 &23382941546710894
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1261021634839708}
+  m_GameObject: {fileID: 1262889232938954}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,32 +79,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33404694981951536
+--- !u!33 &33859106916788078
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1261021634839708}
+  m_GameObject: {fileID: 1262889232938954}
   m_Mesh: {fileID: 4300000, guid: d0bc9171a3a55244fb51b7bd357ca028, type: 3}
---- !u!95 &95099881308267432
+--- !u!54 &54084101945832512
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262889232938954}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &95672728882001788
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1261021634839708}
+  m_GameObject: {fileID: 1262889232938954}
   m_Enabled: 1
-<<<<<<< HEAD:ChainReactionGame/Assets/Prefabs/CarPrefab.prefab
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7e2f63d92488e343b08774b674016c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeftEdgeOfMap: -7.5
-  RightEdgeOfMap: 7.5
-  isTallied: 0
-  ScoreManager: {fileID: 1528257196488380, guid: f4a9020d30cdc184791f47694dda0568,
-    type: 2}
-=======
   m_Avatar: {fileID: 9000000, guid: d0bc9171a3a55244fb51b7bd357ca028, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -113,4 +119,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
->>>>>>> ad70204fe9349613a5fd581c3ef2189c45c72cb4:ChainReactionGame/Assets/Prefabs/CarGreenPreab.prefab
+--- !u!114 &114635441136737302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262889232938954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef280ea81f54814380fad62359cd050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
