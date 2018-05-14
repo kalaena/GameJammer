@@ -22,8 +22,16 @@ GameObject:
   - component: {fileID: 33148791777632062}
   - component: {fileID: 23602178689531722}
   - component: {fileID: 95706900648673306}
+<<<<<<< HEAD
   - component: {fileID: 54922263441883174}
   - component: {fileID: 114800834056277224}
+=======
+<<<<<<< HEAD
+  - component: {fileID: 114789381350811472}
+=======
+  - component: {fileID: 65469795660174594}
+>>>>>>> 019397537732c1076aa3ac503b86836351169141
+>>>>>>> 24891f58dc21587e85ff50fe7708b12b8f44e12b
   m_Layer: 0
   m_Name: CarBluePrefab
   m_TagString: Untagged
@@ -119,7 +127,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
 --- !u!114 &114800834056277224
+=======
+--- !u!114 &114789381350811472
+>>>>>>> 24891f58dc21587e85ff50fe7708b12b8f44e12b
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -127,6 +139,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1028996969162370}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: fef280ea81f54814380fad62359cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Script: {fileID: 11500000, guid: e7e2f63d92488e343b08774b674016c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftEdgeOfMap: -7.5
+  RightEdgeOfMap: 7.5
+  isTallied: 0
+  ScoreManager: {fileID: 0}
+>>>>>>> 24891f58dc21587e85ff50fe7708b12b8f44e12b

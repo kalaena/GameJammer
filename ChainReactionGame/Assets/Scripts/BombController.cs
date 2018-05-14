@@ -29,7 +29,7 @@ public class BombController : MonoBehaviour
 
         //create explosion at our bomb's location
         explosionInstance = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-
+        
         //create smoke emitter standing upright
         GameObject smoke = Instantiate(smokeEmitter, transform.position, Quaternion.identity);
         smoke.transform.Rotate(-90, 0, 0);

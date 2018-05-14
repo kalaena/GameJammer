@@ -44,8 +44,7 @@ public class GameController : MonoBehaviour
                 Vector3 bombLocation = hit.point;
                 bombLocation.y += (bombHeight / 2.0f);
                 GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.identity).gameObject;
-                BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
-                
+                                
                 //play sfx when placing bomb
                 this.gameObject.GetComponent<AudioSource>().Play();
             }
