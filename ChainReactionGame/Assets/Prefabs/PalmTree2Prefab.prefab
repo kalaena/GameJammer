@@ -308,6 +308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4756134944673530}
+  - component: {fileID: 65095858513094830}
   m_Layer: 0
   m_Name: PalmTree2Prefab
   m_TagString: Untagged
@@ -1937,3 +1938,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726591136287192}
   m_Mesh: {fileID: 4300012, guid: 4d9ae176176ac86488073ac8ac28a8ec, type: 3}
+--- !u!65 &65095858513094830
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1598775438740758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

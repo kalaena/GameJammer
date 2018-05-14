@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33037385205417518}
   - component: {fileID: 23660352442439004}
   - component: {fileID: 95268448338237698}
+  - component: {fileID: 65413527852091650}
   m_Layer: 0
   m_Name: CopcarPrefab
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602267981028344}
   m_Mesh: {fileID: 4300000, guid: e17998f1cfe67ae40939613b82302285, type: 3}
+--- !u!65 &65413527852091650
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602267981028344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.049101528, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95268448338237698
 Animator:
   serializedVersion: 3
