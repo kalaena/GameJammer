@@ -33,6 +33,9 @@ public class GameController : MonoBehaviour
                 //spawn a bomb at the clicked point
                 GameObject bomb = Instantiate(bombPrefab, hit.point, Quaternion.identity).gameObject;
                 BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
+                
+                //play sfx when placing bomb
+                this.gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }
