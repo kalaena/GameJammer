@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 33148791777632062}
   - component: {fileID: 23602178689531722}
   - component: {fileID: 95706900648673306}
+<<<<<<< HEAD
   - component: {fileID: 114789381350811472}
+=======
+  - component: {fileID: 65469795660174594}
+>>>>>>> 019397537732c1076aa3ac503b86836351169141
   m_Layer: 0
   m_Name: CarBluePrefab
   m_TagString: Untagged
@@ -85,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028996969162370}
   m_Mesh: {fileID: 4300000, guid: f1146a2dbf0a5a04e90f63802b3944ea, type: 3}
+--- !u!65 &65469795660174594
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028996969162370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95706900648673306
 Animator:
   serializedVersion: 3

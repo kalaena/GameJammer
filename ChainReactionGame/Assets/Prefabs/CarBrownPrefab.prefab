@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33639679752099882}
   - component: {fileID: 23871954879178682}
   - component: {fileID: 95984789988921002}
+  - component: {fileID: 65244334178384726}
   m_Layer: 0
   m_Name: CarBrownPrefab
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1082684399475630}
   m_Mesh: {fileID: 4300000, guid: 90b197adf27a10a49a8c52de9e2a16c0, type: 3}
+--- !u!65 &65244334178384726
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082684399475630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95984789988921002
 Animator:
   serializedVersion: 3

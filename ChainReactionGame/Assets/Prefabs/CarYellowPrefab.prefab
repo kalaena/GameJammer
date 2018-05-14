@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33423582128722310}
   - component: {fileID: 23495164370671576}
   - component: {fileID: 95915605777093066}
+  - component: {fileID: 65497249463566420}
   m_Layer: 0
   m_Name: CarYellowPrefab
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1617920099373496}
   m_Mesh: {fileID: 4300000, guid: c7cf96a35c0f72645abed2b0a5f211b8, type: 3}
+--- !u!65 &65497249463566420
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617920099373496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95915605777093066
 Animator:
   serializedVersion: 3

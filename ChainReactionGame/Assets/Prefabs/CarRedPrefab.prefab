@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33988546891072134}
   - component: {fileID: 23686927924176204}
   - component: {fileID: 95036428201320424}
+  - component: {fileID: 65571429960909958}
   m_Layer: 0
   m_Name: CarRedPrefab
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644429630974828}
   m_Mesh: {fileID: 4300000, guid: e6d8747b180947b4db64f8ea672a1e34, type: 3}
+--- !u!65 &65571429960909958
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644429630974828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95036428201320424
 Animator:
   serializedVersion: 3
