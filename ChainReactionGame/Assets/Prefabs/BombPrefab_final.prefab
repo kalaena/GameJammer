@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4558804961166492}
   - component: {fileID: 33893796218094446}
   - component: {fileID: 23332870196855766}
+  - component: {fileID: 114063026385430824}
   m_Layer: 0
   m_Name: BombPrefab_final
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1196355644173036}
   m_Mesh: {fileID: 4300000, guid: 80eb0424e9ead264eb9e8acfaa5538b6, type: 3}
+--- !u!114 &114063026385430824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196355644173036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694cdc11e4c447f42ab5a17c09dc3c5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  cubeUnlocker: {fileID: 1576351629148736, guid: 8c097d1405fd41041ad8ebd8ae0e2c03,
+    type: 2}
+  smokeEmitter: {fileID: 1606547981126392, guid: 4b82ed913efc80e4aa5fbb1574ae18bd,
+    type: 2}
