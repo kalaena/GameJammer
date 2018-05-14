@@ -32,9 +32,10 @@ public class BombManagerScript : MonoBehaviour {
     public void detonateBombs() {
         foreach (GameObject bomb in bombsPlaced)
         {
-            bomb.GetComponent<BombController>().explode();
+            bomb.GetComponent<BombController>().explode();            
         }
         bombsPlaced.Clear();
         detonateButton.GetComponent<Button>().interactable = false;
+
     }
 }
