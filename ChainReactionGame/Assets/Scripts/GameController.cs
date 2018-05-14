@@ -36,15 +36,12 @@ public class GameController : MonoBehaviour
             {
                 BombManager.GetComponent<BombManagerScript>().bombPlaced();
 
-                Debug.Log(hit.point);
-
-                float bombHeight = bombPrefab.transform.lossyScale.y;
-
                 //spawn a bomb at the clicked point
                 Vector3 bombLocation = hit.point;
-                bombLocation.y += (bombHeight / 2.0f);
-                GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.identity).gameObject;
-                                
+                GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.Euler(90.0f, 0.0f, 0.0f)).gameObject;
+                BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
+
+
                 //play sfx when placing bomb
                 this.gameObject.GetComponent<AudioSource>().Play();
             }
