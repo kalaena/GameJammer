@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: a6f22dad07bc5d348bfac92dd6d681e4
-=======
-guid: fdba8e58772e14a428142d07c030bae0
->>>>>>> 24891f58dc21587e85ff50fe7708b12b8f44e12b
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -1072,6 +1068,7 @@ ModelImporter:
     4300414: pCube9738
     4300416: pCube10881
     4300418: pCube10284
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1147,7 +1144,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
