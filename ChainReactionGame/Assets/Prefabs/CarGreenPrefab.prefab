@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23044138646208664}
   - component: {fileID: 95099881308267432}
   m_Layer: 0
-  m_Name: CarGreenPreab
+  m_Name: CarGreenPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
