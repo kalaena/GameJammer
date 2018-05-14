@@ -6,7 +6,8 @@ public class ScoreScript : MonoBehaviour {
 
     public int playerScore;
     public int highScore;
-    public DataController dataController;
+    public GameObject dataController;
+    public GameObject PointNotifier;
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +22,8 @@ public class ScoreScript : MonoBehaviour {
 
     public void refreshHighScore() 
     {
-        dataController.loadPlayerProgress();
-        highScore = dataController.GetHighestPlayerScore();
+        dataController.GetComponent<DataController>().loadPlayerProgress();
+        highScore = dataController.GetComponent<DataController>().GetHighestPlayerScore();
     }
 
     public void tallyCube()
