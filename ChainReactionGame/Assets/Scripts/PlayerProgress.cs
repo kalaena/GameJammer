@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProgress : MonoBehaviour {
+public class PlayerProgress {
 
     public int highestScore;
 

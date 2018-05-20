@@ -8,7 +8,8 @@ public class DataController : MonoBehaviour
 	
 	void Start ()  
 	{
-		DontDestroyOnLoad (gameObject);		
+		DontDestroyOnLoad (gameObject);
+        loadPlayerProgress();
 	}
 
     public void loadPlayerProgress()

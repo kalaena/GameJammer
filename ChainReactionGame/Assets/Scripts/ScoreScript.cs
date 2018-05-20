@@ -6,14 +6,15 @@ public class ScoreScript : MonoBehaviour {
 
     public int playerScore;
     public int highScore;
+    private int carScore;
     public GameObject dataController;
     public GameObject PointNotifier;
 
 	// Use this for initialization
 	void Start () {
         playerScore = 0;
-        //refreshHighScore();
-	}
+        carScore = 50;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,12 +29,16 @@ public class ScoreScript : MonoBehaviour {
 
     public void tallyCube()
     {
-        playerScore++;        
+        playerScore++;
+        dataController.GetComponent<DataController>().SubmitNewPlayerScore(playerScore); 
     }
 
     public void tallyCar(Vector3 pos) 
     {
-        playerScore += 50;
-        PointNotifier.GetComponent<PointNotificationScript>().createNotification(50, pos);
+        playerScore += carScore;        
+        dataController.GetComponent<DataController>().SubmitNewPlayerScore(playerScore);
+
+        //create notification in game world
+        PointNotifier.GetComponent<PointNotificationScript>().createNotification(carScore, pos);
     }
 }

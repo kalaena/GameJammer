@@ -6,19 +6,16 @@ using UnityEngine.UI;
 public class HighScoreUI : MonoBehaviour {
 
     public GameObject DataController;
+    public GameObject ScoreManager;
 
 	// Use this for initialization
 	void Start () {
-        refreshHighScore();
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        this.gameObject.GetComponent<Text>().text = "High Score: " + ScoreManager.GetComponent<ScoreScript>().highScore;
 	}
 
-    void refreshHighScore()
-    {
-        this.gameObject.GetComponent<Text>().text = "High Score: " + DataController.GetComponent<DataController>().GetHighestPlayerScore();
-    }
 }
