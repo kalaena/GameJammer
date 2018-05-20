@@ -8,21 +8,13 @@ public class RedFlashScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Vector3 bombPos = this.gameObject.GetComponentInParent<Transform>().position;
-        Vector3 camPos = GameObject.Find("CameraHolder").transform.position;
-        Vector3 diffPos = camPos - bombPos;        
-
-        
-        this.gameObject.transform.LookAt(GameObject.Find("CameraHolder").transform);
-        this.gameObject.transform.Translate(diffPos * 0.1f);
         lightOn = false;
-
-        StartCoroutine(flash(0.3f, 1.0f));
+        StartCoroutine(flash(0.25f, 1.25f));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+       
 	}
 
     public IEnumerator flash(float timeOn, float timeOff)
@@ -33,18 +25,14 @@ public class RedFlashScript : MonoBehaviour {
 
             if (lightOn)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                this.gameObject.GetComponent<MeshRenderer>().enabled = true;
                 yield return new WaitForSeconds(timeOn);
             }
             else
             {
-                this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                this.gameObject.GetComponent<MeshRenderer>().enabled = false;
                 yield return new WaitForSeconds(timeOff);
-            }
-
-           
-           
-        }
-        
+            }           
+        }        
     }
 }
