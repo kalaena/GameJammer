@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO; 
 using UnityEngine.SceneManagement;
 
 public class DataController : MonoBehaviour 
@@ -8,7 +9,7 @@ public class DataController : MonoBehaviour
 	
 	void Start ()  
 	{
-		DontDestroyOnLoad (gameObject);
+		//DontDestroyOnLoad (gameObject);
         loadPlayerProgress();
 	}
 
@@ -17,8 +18,13 @@ public class DataController : MonoBehaviour
         playerProgress = new PlayerProgress();
 
         if (PlayerPrefs.HasKey("highestScore"))
-        {
-            playerProgress.highestScore = PlayerPrefs.GetInt("highestScore");
+        {          
+            playerProgress.highestScore = PlayerPrefs.GetInt("highestScore");            
+        }
+
+        else
+        {           
+            PlayerPrefs.SetInt("highestScore", 0);
         }
     }
 
@@ -28,9 +34,10 @@ public class DataController : MonoBehaviour
     }
 
     public void SubmitNewPlayerScore(int newScore) 
-    {
+    {        
         if (newScore > playerProgress.highestScore)
         {
+            Debug.Log("newScore: " + newScore + " > " + "highScore: " + playerProgress.highestScore);
             playerProgress.highestScore = newScore;
             SavePlayerProgress();
         }

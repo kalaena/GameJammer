@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
                 BombManager.GetComponent<BombManagerScript>().bombPlaced();
 
                 //spawn a bomb at the clicked point
-                Vector3 bombLocation = hit.point + new Vector3(0, 1.0f,0);
+                Vector3 bombLocation = hit.point + new Vector3(0, 0.2f,0);
                 GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.Euler(90.0f, 0.0f, 0.0f)).gameObject;
                 BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
 

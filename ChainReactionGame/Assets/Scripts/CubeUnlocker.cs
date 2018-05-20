@@ -12,6 +12,7 @@ public class CubeUnlocker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ScoreManager = GameObject.Find("ScoreManager");
         _sphereCollider = gameObject.GetComponent<SphereCollider>();
     }
 

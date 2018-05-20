@@ -15,7 +15,7 @@ public class HighScoreUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.gameObject.GetComponent<Text>().text = "High Score: " + ScoreManager.GetComponent<ScoreScript>().highScore;
+        this.gameObject.GetComponent<Text>().text = "High Score: " + DataController.GetComponent<DataController>().GetHighestPlayerScore();
 	}
 
 }

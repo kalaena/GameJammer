@@ -5,7 +5,6 @@ using UnityEngine;
 public class ScoreScript : MonoBehaviour {
 
     public int playerScore;
-    public int highScore;
     private int carScore;
     public GameObject dataController;
     public GameObject PointNotifier;
@@ -14,28 +13,25 @@ public class ScoreScript : MonoBehaviour {
 	void Start () {
         playerScore = 0;
         carScore = 50;
+        //PlayerPrefs.SetInt("highestScore", 0);
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
-	}
-
-    public void refreshHighScore() 
-    {
-        dataController.GetComponent<DataController>().loadPlayerProgress();
-        highScore = dataController.GetComponent<DataController>().GetHighestPlayerScore();
-    }
+	}  
 
     public void tallyCube()
     {
         playerScore++;
+        //dataController.GetComponent<DataController>().loadPlayerProgress();
         dataController.GetComponent<DataController>().SubmitNewPlayerScore(playerScore); 
     }
 
     public void tallyCar(Vector3 pos) 
     {
-        playerScore += carScore;        
+        playerScore += carScore;
+        //dataController.GetComponent<DataController>().loadPlayerProgress();
         dataController.GetComponent<DataController>().SubmitNewPlayerScore(playerScore);
 
         //create notification in game world

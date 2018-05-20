@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class PlayerProgress {
 
-    public int highestScore;
+    public int highestScore = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
