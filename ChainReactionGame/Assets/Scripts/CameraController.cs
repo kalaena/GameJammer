@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
         {
             pos.z -= panSpeed * Time.deltaTime;
         }
+       /*
         else if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
         {
             pos.x += panSpeed * Time.deltaTime;
@@ -32,7 +33,7 @@ public class CameraController : MonoBehaviour
         {
             pos.x -= panSpeed * Time.deltaTime;
         }
-
+        
       ///  float scroll = Input.GetAxis("Mouse ScrollWheel"); // Allows the scroll wheel to move on the Y axis at a set speed.
         ///if (scroll != 0.0f)
         //{
@@ -42,7 +43,7 @@ public class CameraController : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x); //Sets X axis movement of the camera. Can be adjusted in Unity.
         //pos.y = Mathf.Clamp(pos.y, minY, maxY); //Clamps camera zoom.
         pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y); //Sets Z axis movement of the camera. Can be adjusted in Unity.
-
+        */
         transform.position = pos; //Moves camera. 
     }
 }

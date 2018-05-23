@@ -16,8 +16,11 @@ public class TNTscript : MonoBehaviour {
 		
 	}
 
-    public void explode()
+    public IEnumerator explode()
     {
+        //delay explosion to simulate a fuse - chain effect
+        yield return new WaitForSeconds(.3f);
+
         //play bomb explosion sound
         this.gameObject.GetComponent<AudioSource>().Play();
 
@@ -43,7 +46,7 @@ public class TNTscript : MonoBehaviour {
 
     private IEnumerator cleanupExplosion()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.25f);
 
         //destroy this explosion
         Destroy(explosionInstance);
