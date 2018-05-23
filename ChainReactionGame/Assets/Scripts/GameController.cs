@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         //handle mouse clicks
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && BombManager.GetComponent<BombManagerScript>().remainingBombs > 0)
         {
             if (EventSystem.current.IsPointerOverGameObject())
             {
@@ -31,19 +31,21 @@ public class GameController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             //check if ray collides with something for us to place a bomb on (in this case the ground)
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit) && BombManager.GetComponent<BombManagerScript>().remainingBombs > 0)
+            RaycastHit[] hits = Physics.RaycastAll(ray, 100.0f);
+            foreach (RaycastHit hit in hits)
             {
                 BombManager.GetComponent<BombManagerScript>().bombPlaced();
 
                 //spawn a bomb at the clicked point
-                Vector3 bombLocation = hit.point + new Vector3(0, 0.2f,0);
-                GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.Euler(90.0f, 0.0f, 0.0f)).gameObject;
+                Vector3 bombLocation = hit.point + new Vector3(0, 0.2f, 0);
+                GameObject bomb = Instantiate(bombPrefab, bombLocation, Quaternion.identity).gameObject;
                 BombManager.GetComponent<BombManagerScript>().bombsPlaced.Add(bomb);
 
 
                 //play sfx when placing bomb
                 this.gameObject.GetComponent<AudioSource>().Play();
+
+                break;
             }
         }
     }
