@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BombController : MonoBehaviour
-{
+public class TNTscript : MonoBehaviour {
+
+
     public GameObject explosionPrefab;
     public GameObject cubeUnlocker;
     public GameObject smokeEmitter;
 
     private GameObject explosionInstance;
 
+	// Use this for initialization
+	void Start () {
+		
+	}
+
     public void explode()
-    {             
+    {
         //play bomb explosion sound
         this.gameObject.GetComponent<AudioSource>().Play();
 
@@ -27,7 +33,7 @@ public class BombController : MonoBehaviour
 
         //create a sphere collider that adds rigidbody collision to all cubes it touches
         cubeUnlocker = Instantiate(cubeUnlocker, transform.position, Quaternion.identity);
-        
+
         //we can't destroy the game object just yet, because we have to wait for the explosion to cleanup... so move it out of view for a moment until we destroy it
         gameObject.transform.position = new Vector3(999, 999, 999);
 
@@ -47,5 +53,4 @@ public class BombController : MonoBehaviour
 
         //DO NOT DESTROY SMOKE EMITTER
     }
-
 }

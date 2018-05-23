@@ -32,8 +32,15 @@ public class CubeUnlocker : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
+
+        //if the cube unlocker hits a TNT charge
+        if (collision.gameObject.tag.Equals("TNT"))
+        {
+            collision.gameObject.GetComponent<TNTscript>().explode();
+        }
+
         //if the object is not the ground (tag "Immobile") and the CubeUnlocker hasn't already tried unlocking in a previous frame
-        if (collision.gameObject.GetComponent<Rigidbody>() == null && !collision.gameObject.tag.Equals("Immobile"))
+        else if (collision.gameObject.GetComponent<Rigidbody>() == null && !collision.gameObject.tag.Equals("Immobile"))
         {
             Rigidbody rb = collision.gameObject.AddComponent<Rigidbody>();
             rb.AddExplosionForce(50, collision.gameObject.transform.position, 100, 1.0f);
