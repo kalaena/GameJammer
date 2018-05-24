@@ -14,7 +14,7 @@ public class BombManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        remainingBombs = maxNumberOfBombsAllowed = 3;
+        remainingBombs = maxNumberOfBombsAllowed = 10;
         bombsPlaced = new List<GameObject>();
         detonateButton.GetComponent<Button>().interactable = false;
 	}
@@ -33,7 +33,7 @@ public class BombManagerScript : MonoBehaviour {
 
     public void detonateBombs() {
         //Shake the camera when bombs are detonated, scaled off the number of bombs that exploded
-        CameraShaker.Instance.ShakeOnce(5.0f * bombsPlaced.Count, 3.0f, 0.1f, 2.0f);
+        CameraShaker.Instance.ShakeOnce(2.0f * bombsPlaced.Count, 3.0f, 0.1f, 2.0f);
         
         //Explode each bomb placed in the level
         foreach (GameObject bomb in bombsPlaced) {

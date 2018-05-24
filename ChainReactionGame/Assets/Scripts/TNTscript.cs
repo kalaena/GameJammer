@@ -51,7 +51,7 @@ public class TNTscript : MonoBehaviour {
         //destroy this explosion
         Destroy(explosionInstance);
 
-        //destroy this bomb
+        //destroy this TNT
         Destroy(gameObject);
 
         //DO NOT DESTROY SMOKE EMITTER
