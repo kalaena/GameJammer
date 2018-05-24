@@ -21,7 +21,7 @@ public class CubeUnlocker : MonoBehaviour
     {
 
         //cascade the cube destruction up the building and eventually self-cleanup
-        if (transform.position.y < 30)
+        if (transform.position.y < 100)
             transform.position += _cascadeVector;
         else
             Destroy(gameObject);
