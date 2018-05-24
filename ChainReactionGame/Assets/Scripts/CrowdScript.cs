@@ -12,7 +12,7 @@ public class CrowdScript : MonoBehaviour {
 	void Start () {
        
         ScoreManager = GameObject.Find("ScoreManager");
-        clapThreshold = 500;
+        clapThreshold = 1000;
 	}
 	
 	// Update is called once per frame
