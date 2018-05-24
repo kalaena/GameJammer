@@ -43,7 +43,12 @@ public class CubeUnlocker : MonoBehaviour
         else if (collision.gameObject.GetComponent<Rigidbody>() == null && !collision.gameObject.tag.Equals("Immobile"))
         {
             Rigidbody rb = collision.gameObject.AddComponent<Rigidbody>();
-            rb.AddExplosionForce(50, collision.gameObject.transform.position, 100, 1.0f);
+            //doesnt work
+            //rb.AddExplosionForce(100, collision.gameObject.transform.position, 10, 10.0f);
+            int randXforce = Random.Range(-7, 7);
+            int randYforce = Random.Range(1, 5);
+            int randZforce = Random.Range(-7, 7);
+            rb.AddForce(randXforce, randYforce, randZforce, ForceMode.Impulse);
             ScoreManager.GetComponent<ScoreScript>().tallyCube();
 
             CubeScript cs = collision.gameObject.GetComponent<CubeScript>();

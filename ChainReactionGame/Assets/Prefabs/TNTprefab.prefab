@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 23726858166780058}
   - component: {fileID: 114946599313216478}
   - component: {fileID: 82911905095564328}
+  - component: {fileID: 65858277283583024}
   m_Layer: 0
   m_Name: TNTprefab
   m_TagString: TNT
@@ -172,6 +173,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65858277283583024
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989716470872040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011622896, y: 0.011961255, z: 0.022832103}
+  m_Center: {x: 0, y: -0.0005558266, z: 0.003368656}
 --- !u!82 &82911905095564328
 AudioSource:
   m_ObjectHideFlags: 1
@@ -181,7 +194,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aff31e8d936b0b14c95d94d57ec214aa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b90f3493fcc12064c8eb11249a9c7617, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -21,7 +21,7 @@ public class PointUIScript : MonoBehaviour {
     void Update()
     {
         //slowly move up until death
-        this.gameObject.transform.Translate(new Vector3(0, 0.005f, 0));
+        this.gameObject.transform.Translate(new Vector3(0, 0.008f, 0));
         //if (this.gameObject.transform.position.y - originalYposition > 5)
             //GameObject.Destroy(this.gameObject);
         if (lifetime <= 0)
