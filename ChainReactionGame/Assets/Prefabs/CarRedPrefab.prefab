@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95503574707825400}
   - component: {fileID: 54957124026797360}
   - component: {fileID: 114152377456207134}
+  - component: {fileID: 65326206922255678}
   m_Layer: 0
   m_Name: CarRedPrefab
   m_TagString: Untagged
@@ -101,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65326206922255678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762048318884076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95503574707825400
 Animator:
   serializedVersion: 3
@@ -130,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef280ea81f54814380fad62359cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreManager: {fileID: 0}

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95984789988921002}
   - component: {fileID: 54159915884410154}
   - component: {fileID: 114003083986709368}
+  - component: {fileID: 65175718619344648}
   m_Layer: 0
   m_Name: CarBrownPrefab
   m_TagString: Untagged
@@ -101,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65175718619344648
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082684399475630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03676152, y: 0.045558758, z: 0.062976204}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95984789988921002
 Animator:
   serializedVersion: 3

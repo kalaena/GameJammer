@@ -7,27 +7,28 @@ public class PointUIScript : MonoBehaviour {
 
     public int pointValue;
     public float originalYposition;
-    public const float fadeSpeed = 0.01f;
+    public float lifetime;
+
 
 	// Use this for initialization
 	void Start () {
 		pointValue = 0;
         originalYposition = this.gameObject.transform.position.y;
+        lifetime = 1.5f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
         //slowly move up until death
-        this.gameObject.transform.Translate(new Vector3(0,0.01f,0));
-        if (this.gameObject.transform.position.y - originalYposition > 5)
+        this.gameObject.transform.Translate(new Vector3(0, 0.005f, 0));
+        //if (this.gameObject.transform.position.y - originalYposition > 5)
+            //GameObject.Destroy(this.gameObject);
+        if (lifetime <= 0)
             GameObject.Destroy(this.gameObject);
+        lifetime -= Time.deltaTime;
 
-        Text text = this.gameObject.GetComponent<Text>();
-        //fade away
-        //if (text.color != Color.clear)
-            //Color.Lerp(text.color, Color.clear, fadeSpeed * Time.deltaTime);
-
-	}
+    }
 
     public void setPointValue(int pointValue) 
     {
